@@ -1,13 +1,13 @@
-def get_book_text(filepath):
+def get_book_text(filepath: str) -> str:
     with open(filepath) as f:
         file_contents = f.read()
     return file_contents
 
-def count_words(string):
+def count_words(string: str) -> int:
     arr = string.split()
     return len(arr)
 
-def count_chars(string):
+def count_chars(string: str) -> dict[str, int]:
     chars_dict = dict()
     words = string.lower().split()
     for word in words:
@@ -35,4 +35,3 @@ def report_chars(filepath: str):
         print(f"{chars[0]}: {chars[1]}")
     
     print("============= END ===============")
-    return
